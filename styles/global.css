@@ -1,0 +1,406 @@
+/* Primary Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800&display=swap');
+/* Secondary Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800&display=swap');
+
+/* Resets */
+/* => The new CSS Reset {{{
+============================== */
+
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+textarea {
+  white-space: revert;
+}
+
+/* }}} */
+
+/* => Box Sizing {{{
+============================== */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
+	}
+
+	/* }}} */
+/* => Utilities {{{
+============================== */
+
+.fullWidth {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* }}} */
+
+/* Base Settings */
+/* => Pallette, CSS Variables {{{
+============================== */
+
+:root {
+  /* Pallette */
+  --white: #FFF;
+  --black: #111;
+  --neon-blue: #0080F3;
+  --orange: orange;
+  --orange-yellow: #fccf03;
+  --dark-gray: #333;
+  --gray: #777;
+  --light-gray: #DDD;
+	--green: #32a852;
+	--dark-green: #105228;
+
+  /* Global Colors */
+	--background-color: var(--white);
+  --font-color: var(--black);
+	--body-heading-color: var(--font-color);
+	--link-color: var(--font-color);
+	--link-hover-color: var(--green);
+	--menu-background-toggled: var(--white);
+	--topbar-background-color: var(--green);
+	--topbar-font-color: var(--white);
+	--header-background-color: var(--white);
+	--header-font-color: var(--black);
+	--tagline-color: var(--dark-gray);
+	--hamburger-background-color: var(--dark-gray);
+	--hamburger-bars: var(--white);
+	--footer-background-color: var(--black);
+	--footer-font-color: var(--white);
+	--credits-hover-color: var(--neon-blue);
+	--credits-background-color: var(--black);
+	--credits-font-color: var(--white);
+	--credits-hover-color: var(--neon-blue);
+
+
+  /* Fonts */
+  --primary-font: "Roboto Condensed";
+  --secondary-font: "Roboto Condensed";
+
+	/* Other */
+	--header-height: 250px; /* interacts with hamburger menu */
+}
+/* }}} */
+
+/* => Typography {{{
+============================== */
+
+html {
+	font-family: var(--primary-font);
+	font-size: calc(16px + 0.3vw);
+  line-height: 1.6;
+}
+
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #404040;
+	font-family: var(--primary-font);
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+	margin: 0.75em 0 0.4em;
+	clear: both;
+	text-align: center;
+}
+
+h1 {
+	font-size: 1.8rem;
+}
+
+h2 {
+	font-size: 1.6rem;
+}
+
+h3 {
+	font-size: 1.4rem;
+}
+
+h4 {
+	font-size: 1.2rem;
+}
+
+p {
+	/* inherits font size from body */
+	text-indent: 1.2em;
+	margin: 1.5em 1em;
+}
+
+.subheading {
+	color: #767676;
+	font-family: var(--primary-font);
+	font-size: 14px;
+	font-size: calc(11px + 0.3vw);
+	font-weight: 500;
+	letter-spacing: 0;
+	margin-bottom: 10px;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+	padding: 0 0 0 30px;
+}
+
+blockquote:before,
+blockquote:after {
+	content: "";
+}
+
+blockquote p {
+	font-weight: 500;
+	hanging-punctuation: first;
+}
+
+blockquote cite:before {
+	content: "— ";
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", courier, monospace;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+	text-decoration: none;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+em {
+	font-style: italic;
+}
+
+/* }}} */
+/* => Elements {{{
+============================== */
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	display: block;
+}
+
+figure {
+	margin: 1em 0;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* }}} */
+/* => Links {{{
+============================== */
+
+a, a:visited {
+	color: inherit;
+	text-decoration: none;
+	transition: all 0.15s ease-in-out;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: var(--link-hover-color);
+	text-decoration: underline;
+	cursor: pointer !important;
+}
+
+a:hover,
+a:focus,
+a:active {
+	outline: 0;
+}
+
+/* }}} */
+/* => Forms {{{
+============================== */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+}
+
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+	border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+textarea {
+	width: 100%;
+}
+
+/* }}} */
+
+
+

@@ -1,0 +1,25 @@
+/* layout guides */
+/* .content * { */
+/*   border: 1px solid gray; */
+/* } */
+/* .container { */
+/*   border: 1px solid green; */
+/* } */
+/* .content { */
+/*   border: 1px solid red; */
+/* } */
+
+
+/* .container is the wrapper around everything, including the header and footer/credits */
+/* .container { */
+/*   background: pink; */
+/* } */
+
+/* this is the main body content */
+.content {
+  width: calc(95vw - 20px);
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 50px 0 50px;
+}
+
