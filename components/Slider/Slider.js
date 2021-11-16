@@ -44,7 +44,7 @@ export default function Slider() {
 
 
 	return (
-		<>
+		<div className={styles.slider}>
 			<div className={styles.imageContainer}>
 
 				{dataSlider.map((obj, index) => {
@@ -87,6 +87,6 @@ export default function Slider() {
 				))}
 			</div>
 
-		</>
+		</div>
 	)
 }

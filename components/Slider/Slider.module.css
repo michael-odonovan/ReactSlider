@@ -5,6 +5,10 @@
 /*   border: 1px solid gray; */
 /* } */
 
+.slider {
+  margin: 50px 0 0;
+}
+
 .imageContainer {
   max-width: 700px;
   height: 500px;
